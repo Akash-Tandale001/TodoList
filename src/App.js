@@ -7,16 +7,19 @@ import PageNotFound from './pages/PageNotFound';
 import Todolist from './pages/Todolist';
 import About from './pages/About';
 import Footer from './components/Footer';
+import { useState } from 'react';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+ 
   return (
     <BrowserRouter>
-    <Navbar />
+    <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
 
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/todolist" element={<Todolist />}/>
+      <Route path="/todolist" element={<Todolist isLoggedIn={isLoggedIn}/>}/>
       <Route path="/about" element={<About />}/>
       <Route path="/:pagename" element={<PageNotFound />} />
     </Routes>

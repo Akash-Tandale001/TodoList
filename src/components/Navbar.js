@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../pages/style.css";
 
-const Navbar = () => {
+const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
+  const navigate = useNavigate();  
+
+  const handleOnLogout=()=>{
+      setIsLoggedIn(false);
+  }
+
   return (
-    <nav className="navbar sticky-top navbar-expand-lg navbar-light hometitle shadow p-3 mb-5 bg-body rounded">
+    <nav className="navbar sticky-top navbar-expand-lg navbar-light navbackground shadow p-3 mb-5 bg-body rounded">
       <div className="container-fluid">
         <button
           className="navbar-toggler"
@@ -43,9 +49,9 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <button className=" d-flex btn btn-dark" type="submit">
-            Register
-          </button>
+          {!isLoggedIn ? <button className=" d-flex btn btn-dark" onClick={() => navigate('./login', { replace: true })}> Register</button> : <button className=" d-flex btn btn-dark" type="submit" onClick={handleOnLogout}>
+           Logout
+          </button> }        
         </div>
       </div>
     </nav>

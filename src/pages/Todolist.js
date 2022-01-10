@@ -1,10 +1,16 @@
 import React from 'react'
+import "./style.css"
 
-const Todolist = () => {
+const Todolist = ({isLoggedIn}) => {
     return (
-        <div>
-            Todolist
-        </div>
+        <>
+        {!isLoggedIn ? <div className='loginerror'>Please Login 
+        </div>: <div className='container-fluid'>
+        
+
+
+        </div>}
+        </>
     )
 }
 

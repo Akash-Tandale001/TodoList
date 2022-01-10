@@ -1,3 +1,28 @@
-.hometitle{
+.navbackground{
     background: linear-gradient(to right, #66ccff 0%, #ff99cc 100%);
 }
+.hometitle{
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+    font-size: 4vh;
+    font-weight: bold;
+
+}
+.logintitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15vh;
+    margin-left: 30vh;
+    font-size: 4vh;
+    font-weight: bold;
+
+}
+.signupform{
+    width: 35%;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
