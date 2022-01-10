@@ -10,7 +10,11 @@ import Footer from './components/Footer';
 import { useState } from 'react';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  // const [token, setToken] = useState()
+  // if(!token) {
+  //   return <Login  />
+  // }
  
   return (
     <BrowserRouter>
@@ -18,7 +22,7 @@ function App() {
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<Login  setIsLoggedIn={setIsLoggedIn}/>} />
       <Route path="/todolist" element={<Todolist isLoggedIn={isLoggedIn}/>}/>
       <Route path="/about" element={<About />}/>
       <Route path="/:pagename" element={<PageNotFound />} />

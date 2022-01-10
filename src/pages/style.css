@@ -26,3 +26,36 @@
     border: 1px solid black;
 }
 
+.addItem{
+    display: grid;
+    place-items: center;
+    
+}
+.inputTodo{
+    margin-top: 10px;
+    width: 40vw;   
+    height: 6vh;
+    border-radius: 30px;
+}
+.inputTodo:focus{
+    outline: none;
+}
+.addbutton{
+    border-color:rgba(64, 233, 177, 0.589) ;
+    margin-top: 10px;
+    height: 5vh;
+    width: 15vw;
+    border-radius: 40px;
+    background-color: rgba(64, 233, 177, 0.589);
+}
+.markdone{
+    margin-left: 42%;
+    border-color:rgba(64, 233, 177, 0.589) ;
+    margin-top: 10px;
+    height: 5vh;
+    width: 15vw;
+    border-radius: 40px;
+    background-color: rgba(64, 233, 177, 0.589);
+}
+
+

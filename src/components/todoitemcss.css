@@ -1,0 +1,14 @@
+/*  */
+.item-content {
+    height: 6vh;
+    width: 20vw;
+  border: 1px solid black;
+  margin: 12px;
+  padding: 5px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+.deletebtn {
+  border-radius: 20px;
+  width: 40px;
+}
