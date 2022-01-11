@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./style.css";
 import { useDispatch } from "react-redux";
-import { saveTodo } from "../features/todoSlice";
+import { saveTodo } from "../reducer/todoSlice";
 import TodoItem from "../components/TodoItem";
 import { useSelector } from "react-redux";
-import { selectTodoList } from "../features/todoSlice";
+import { selectTodoList } from "../reducer/todoSlice";
 
 const Todolist = ({ isLoggedIn }) => {
   const [input, setInput] = useState("");
@@ -27,7 +27,7 @@ const Todolist = ({ isLoggedIn }) => {
   return (
     <>
       {!isLoggedIn ? (
-        <div className="loginerror">Please Login</div>
+        <div className="loginerror hometitle">Please Login</div>
       ) : (
         <div className="container-fluid">
           <div className="hometitle">Add TODO</div>

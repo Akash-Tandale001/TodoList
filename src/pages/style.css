@@ -20,7 +20,7 @@
 
 }
 .signupform{
-    width: 35%;
+    width: 35vw;
     margin: 20px;
     padding: 10px;
     border: 1px solid black;
@@ -56,6 +56,12 @@
     width: 15vw;
     border-radius: 40px;
     background-color: rgba(64, 233, 177, 0.589);
+}
+
+
+#default_user{
+    font-size: 12px;
+
 }
 
 
