@@ -7,6 +7,7 @@ const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
 
   const handleOnLogout=()=>{
       setIsLoggedIn(false);
+      navigate("/", { replace: true });
   }
 
   return (
@@ -46,7 +47,15 @@ const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
                 }}
               >
                 About
-              </Link>
+              </Link>             
+            </li>
+            <li>
+              {isLoggedIn ? <Link to="/todolist" className="nav-link active"
+                aria-current="page"
+                style={{
+                  fontSize: "3vh",
+                  fontWeight: "bold",
+                }}>Create TODO</Link>: <p></p>}
             </li>
           </ul>
           {!isLoggedIn ? <button className=" d-flex btn btn-dark" onClick={() => navigate('./login', { replace: true })}> Register</button> : <button className=" d-flex btn btn-dark" type="submit" onClick={handleOnLogout}>

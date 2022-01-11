@@ -8,8 +8,7 @@ const TodoItem = ({ name, done, id }) => {
     const dispatch = useDispatch();
 
     const handlecheck=()=>{
-        dispatch(setCheck(id))
-        
+        dispatch(setCheck(id))   
 
     }
   return (
@@ -22,7 +21,8 @@ const TodoItem = ({ name, done, id }) => {
           onClick={handlecheck}
         />
         <label className="form-check-label" >
-          <p className={done && 'todoitem--done'}>{name}</p>
+          {/* <p className={done && 'todoitem--done'}>{name}</p> */}
+          {!done ? <p>{name}</p> : <p><strike>{name}</strike></p>}
         </label>
       </div>
     </div>
