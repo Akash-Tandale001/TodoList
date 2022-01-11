@@ -13,17 +13,6 @@ const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-light navbackground shadow p-3 mb-5 bg-body rounded">
       <div className="container-fluid">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
         <Link
           to="/"
           className="navbar-brand"
@@ -34,9 +23,20 @@ const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
         >
           Todo list
         </Link>
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
+        {/* <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"> </span>
+        </button> */}
+        <div className="navbar-collapse" id="navbarTogglerDemo03">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+            <li >
               <Link
                 to="/about"
                 className="nav-link active"
@@ -50,7 +50,7 @@ const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
               </Link>             
             </li>
             <li>
-              {isLoggedIn ? <Link to="/todolist" className="nav-link active"
+              {isLoggedIn ? <Link to="/todolist" className="nav-link active text-center"
                 aria-current="page"
                 style={{
                   fontSize: "3vh",
@@ -58,9 +58,10 @@ const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
                 }}>Create TODO</Link>: <p></p>}
             </li>
           </ul>
-          {!isLoggedIn ? <button className=" d-flex btn btn-dark" onClick={() => navigate('./login', { replace: true })}> Register</button> : <button className=" d-flex btn btn-dark" type="submit" onClick={handleOnLogout}>
+          {!isLoggedIn ? <button className=" d-flex btn btn-dark text-center" onClick={() => navigate('./login', { replace: true })}> Register</button> : <button className=" d-flex btn btn-dark text-center" type="submit" onClick={handleOnLogout}>
            Logout
-          </button> }        
+          </button> }   
+               
         </div>
       </div>
     </nav>
