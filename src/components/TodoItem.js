@@ -1,7 +1,7 @@
 import React from "react";
 import "./todoitemcss.css";
 import { useDispatch } from "react-redux";
-import { setCheck } from "../features/todoSlice";
+import { setCheck } from "../reducer/todoSlice";
 
 
 const TodoItem = ({ name, done, id }) => {
@@ -21,7 +21,6 @@ const TodoItem = ({ name, done, id }) => {
           onClick={handlecheck}
         />
         <label className="form-check-label" >
-          {/* <p className={done && 'todoitem--done'}>{name}</p> */}
           {!done ? <p>{name}</p> : <p><strike>{name}</strike></p>}
         </label>
       </div>
