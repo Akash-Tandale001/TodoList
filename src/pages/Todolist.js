@@ -39,7 +39,7 @@ const Todolist = ({ isLoggedIn }) => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />
-            <button disabled={!{input}=="" ? false:true} className="addbutton" onClick={addTodo}>
+            <button className="addbutton" onClick={addTodo}>
               Add
             </button>
           </div>
