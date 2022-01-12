@@ -28,23 +28,25 @@ const Login = ({ setIsLoggedIn }) => {
         onSubmit={handleSubmit}
       >
         <label>
-          <p>Username</p>
+          <p className="username">Username</p>
           <input
             type="text"
             placeholder="Username"
             value={username}
             onChange={(e) => setUserName(e.target.value)}
-            style={{width:"30vw"}}
+            className="login-info"
+           
           />
         </label>
         <br />
         <label>
-          <p>Password</p>
+          <p className="username">Password</p>
           <input
             type="password"
             placeholder="****"
             onChange={(e) => setPassword(e.target.value)}
-            style={{width:"30vw"}}
+            className="login-info"
+           
           />
         </label>
         <div>
