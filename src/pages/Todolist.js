@@ -17,6 +17,8 @@ const Todolist = ({ isLoggedIn }) => {
         id: Date.now(),
       })
     );
+    setInput("");
+    
   };
   const todoList = useSelector(selectTodoList);
 
@@ -37,11 +39,11 @@ const Todolist = ({ isLoggedIn }) => {
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />
-            <button className="addbutton" onClick={addTodo}>
+            <button disabled={!{input}=="" ? false:true} className="addbutton" onClick={addTodo}>
               Add
             </button>
           </div>
-          <div className="container-fluid d-flex justify-content-center flex-wrap mt-4">
+          <div className="container-fluid d-flex justify-content-center flex-wrap  mt-4">
             {todoList.map((item) => {
               return (
                 <TodoItem

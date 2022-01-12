@@ -15,16 +15,12 @@ const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
       <div className="container-fluid">
         <Link
           to="/"
-          className="navbar-brand"
-          style={{
-            fontSize: "4vh",
-            fontWeight: "bold",
-          }}
+          className="navbar-brand logo"        
         >
           Todo list
         </Link>
-        {/* <button
-          className="navbar-toggler"
+        <button
+          className="navbar-toggler "
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarTogglerDemo03"
@@ -32,19 +28,16 @@ const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"> </span>
-        </button> */}
-        <div className="navbar-collapse" id="navbarTogglerDemo03">
+          <span className="navbar-toggler-icon btntoggler"> </span>
+        </button>
+        <div className="navbar-collapse collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-center">
             <li >
               <Link
                 to="/about"
-                className="nav-link active"
+                className="nav-link active logo-content"
                 aria-current="page"
-                style={{
-                  fontSize: "3vh",
-                  fontWeight: "bold",
-                }}
+              
               >
                 About
               </Link>             
@@ -58,7 +51,7 @@ const Navbar = ({isLoggedIn , setIsLoggedIn}) => {
                 }}>Create TODO</Link>: <p></p>}
             </li>
           </ul>
-          {!isLoggedIn ? <button className=" d-flex btn btn-dark text-center" onClick={() => navigate('./login', { replace: true })}> Register</button> : <button className=" d-flex btn btn-dark text-center" type="submit" onClick={handleOnLogout}>
+          {!isLoggedIn ? <button className=" d-flex btn btn-dark " onClick={() => navigate('./login', { replace: true })}> Register</button> : <button className=" d-flex btn btn-dark" type="submit" onClick={handleOnLogout}>
            Logout
           </button> }   
                

@@ -1,14 +1,40 @@
 /*  */
 .item-content {
-    height: 6vh;
+    height: auto;
     width: 20vw;
   border: 1px solid black;
   margin: 12px;
   padding: 5px;
   border-radius: 15px;
   font-weight: bold;
+  font-size: 20px;
+  overflow:auto;
+  word-wrap: break-word;
 }
 .deletebtn {
   border-radius: 20px;
   width: 40px;
+}
+.checkbox-done{
+  margin-left: 10px;
+}
+.task{
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+
+@media screen and (max-width: 480px) {
+  .item-content {
+  height: 6vh;
+  width: 80vw;
+  border: 1px solid black;
+  margin: 12px;
+  padding: 5px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
 }

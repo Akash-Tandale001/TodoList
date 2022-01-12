@@ -36,6 +36,7 @@
     width: 40vw;   
     height: 6vh;
     border-radius: 30px;
+    text-align: center;
 }
 .inputTodo:focus{
     outline: none;
@@ -63,5 +64,66 @@
     font-size: 12px;
 
 }
+
+.logo{
+    font-size: 4vh;
+    font-weight: bold;
+}
+.logo-content{
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+    
+    @media screen and (max-width: 480px) {
+        *{
+            scroll-behavior: smooth;
+
+        }
+        .logo{
+            font-size: 5vh;
+            font-weight: bold;
+        }
+        .btntoggler{
+            border: none;
+        }
+        .logo-content{
+            font-size: 2vh;
+            font-weight: bold;
+        }
+        .inputTodo{
+            margin-top: 10px;
+            width: 80vw;   
+            height: 6vh;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .hometitle{
+            display: flex;
+            justify-content: center;
+            margin-top: 10vh;
+            font-size: 3vh;
+            font-weight: bold;
+        
+        }
+        .logintitle{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            margin-top: 8vh;
+            font-size: 4vh;
+            font-weight: bold;
+        
+        }
+        .signupform{
+
+            width: 35vw;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+      }
 
 
