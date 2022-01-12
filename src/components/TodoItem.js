@@ -15,12 +15,12 @@ const TodoItem = ({ name, done, id }) => {
     <div className="item ">
       <div className="form-check item-content">
         <input
-          className="form-check-input"
+          className="form-check-input checkbox-done"
           type="checkbox"
           value=""
           onClick={handlecheck}
         />
-        <label className="form-check-label" >
+        <label className="form-check-label task" >
           {!done ? <p>{name}</p> : <p><strike>{name}</strike></p>}
         </label>
       </div>
