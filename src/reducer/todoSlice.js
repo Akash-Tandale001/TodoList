@@ -24,12 +24,19 @@ const todoSlice = createSlice({
                     }
                 }
             })
+        },
+
+        deleteTodo:(state ,action)=>{
+            const index=state.todoList.findIndex((item)=> item.id === action.payload);
+            if (index > -1) {
+                state.todoList.splice(index, 1);
+              }
         }
 
     
     }
 });
 
-export const {saveTodo , setCheck} = todoSlice.actions
+export const {saveTodo , setCheck ,deleteTodo} = todoSlice.actions
 export const selectTodoList = state => state.todos.todoList
 export default todoSlice.reducer
